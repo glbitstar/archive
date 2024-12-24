@@ -1,0 +1,1133 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #f5f5f5;
+  font-family: "Noto Sans JP", sans-serif;
+}
+
+p {
+  margin: 0;
+}
+
+button {
+  margin: 0;
+  padding: 0;
+  border: none;
+  background: none;
+  color: inherit;
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+  overflow: visible;
+  cursor: pointer;
+}
+
+
+input[type="checkbox"] {
+  border-radius: 0;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  position: relative;
+  width: 16px;
+  height: 16px;
+  background-color: #ebebe6;
+  vertical-align: -5px;
+}
+
+input[type="checkbox"]:checked {
+  background-color: #e5508b;
+}
+
+input[type="checkbox"]:checked:before {
+  position: absolute;
+  top: 1px;
+  left: 4px;
+  transform: rotate(50deg);
+  width: 4px;
+  height: 8px;
+  border-right: 2px solid #fff;
+  border-bottom: 2px solid #fff;
+  content: '';
+}
+
+input[type=checkbox]:before,
+input[type=checkbox]:after {
+  position: absolute;
+  content: "";
+  background: #fff;
+  transition: all .2s ease-in-out;
+}
+
+input[type=checkbox]:before {
+  left: 2px;
+  top: 6px;
+  width: 0;
+  height: 2px;
+  transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  -o-transform: rotate(45deg);
+}
+
+input[type=checkbox]:after {
+  right: 9px;
+  bottom: 3px;
+  width: 2px;
+  height: 0;
+  transform: rotate(40deg);
+  -webkit-transform: rotate(40deg);
+  -moz-transform: rotate(40deg);
+  -ms-transform: rotate(40deg);
+  -o-transform: rotate(40deg);
+  transition-delay: .2s;
+}
+
+input[type=checkbox]:checked:before {
+  left: 1px;
+  top: 10px;
+  width: 6px;
+  height: 2px;
+}
+
+input[type=checkbox]:checked:after {
+  right: 5px;
+  bottom: 1px;
+  width: 2px;
+  height: 14px;
+}
+
+input[type=checkbox]:indeterminate:before,
+input[type=checkbox]:indeterminate:after {
+  width: 7px;
+  height: 2px;
+  transform: rotate(0);
+  -webkit-transform: rotate(0);
+  -moz-transform: rotate(0);
+  -ms-transform: rotate(0);
+  -o-transform: rotate(0);
+}
+
+input[type=checkbox]:indeterminate:before {
+  left: 1px;
+  top: 7px;
+}
+
+input[type=checkbox]:indeterminate:after {
+  right: 1px;
+  bottom: 7px;
+}
+
+.heart-pink {
+  color: #e5508b;
+}
+
+.pagination_container {
+  overflow-x: auto;
+  white-space: nowrap;
+}
+
+.pagination {
+  display: flex;
+  flex-wrap: nowrap;
+}
+
+.page-item {
+  margin: 40px 10px;
+}
+
+.page-link {
+  border: none;
+  width: 46px;
+  height: 46px;
+  border-radius: 50% !important;
+
+  display: inline-block;
+  text-align: center;
+
+  padding-top: 10px;
+}
+
+.bg-gradation {
+  background-color: transparent !important;
+  background-image: linear-gradient(30deg, rgb(252, 182, 106) 0%, rgb(251, 181, 176) 10%, rgb(222, 149, 180) 50%, rgb(147, 197, 215) 90%, rgb(144, 218, 170) 100%);
+}
+
+.bg-black {
+  background-color: #000;
+  color: #ffffff;
+}
+
+.d-none {
+  display: none;
+}
+
+/* ---------------------------- header ---------------------------- */
+
+.header_bar {
+  width: 100%;
+
+  height: 30px;
+  background-image: linear-gradient(30deg, rgb(252, 182, 106) 0%, rgb(251, 181, 176) 25%, rgb(222, 149, 180) 50%, rgb(147, 197, 215) 75%, rgb(144, 218, 170) 100%);
+
+  position: fixed;
+  z-index: 100;
+  top: 0px;
+  left: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.header_logo {
+  color: #ffffff;
+  text-decoration: none;
+
+  font-family: "Noto Serif JP", serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 14px;
+
+}
+
+.header {
+  width: 100%;
+  height: 60px;
+  background-color: #fbfbfb;
+  position: fixed;
+  z-index: 100;
+  top: 30px;
+  left: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 0 0 0 60px;
+
+  box-shadow: 0 10px 10px -5px rgba(0, 0, 0, 0.2);
+}
+
+.header .hd_search_box .search_form {
+  height: 30px;
+  width: 100%;
+  /* 検索窓の幅を親要素の幅の100%に設定 */
+  border-radius: 0;
+  border: 1px solid #ccc;
+  outline: none;
+
+  padding: 0 10px;
+
+}
+
+.header .hd_search_box #hd_select_list {
+  text-align: center;
+  height: 30px;
+
+  border: 1px solid #ccc;
+  border-right: none;
+  border-radius: 3px 0 0 3px;
+
+  background-color: transparent;
+  /* 背景色を設定 */
+  padding: 0 10px;
+  /* パディングを設定 */
+  font-size: 14px;
+  /* フォントサイズを設定 */
+
+}
+
+.header .hd_search_box {
+  width: 70%;
+  /* フォームの幅を画面幅の50%に設定 */
+  margin: 0 auto;
+  /* 中央揃え */
+
+  border-right: none;
+
+  display: flex;
+  align-items: center;
+  ;
+}
+
+.header .hd_search_box .search_button {
+  width: 40px;
+  height: 30px;
+  background-color: transparent;
+  /* ボタンの背景色を透明に */
+  border: none;
+  /* すべての境界線をリセット */
+
+  border-radius: 0 3px 3px 0;
+  cursor: pointer;
+  /* カーソルをポインターに */
+  padding: 5px;
+  /* 適当なパディング */
+  font-size: 16px;
+  /* アイコンのサイズを調整 */
+
+  background-size: cover;
+  /* 画像がボタンのサイズに合わせて覆うように設定 */
+  background-position: center;
+  /* 画像を中央に配置 */
+  overflow: hidden;
+  /* はみ出た内容を非表示に */
+  cursor: pointer;
+  /* カーソルをポインターに設定 */
+}
+
+.header .hd_search_box #hd_select_list {
+  cursor: pointer;
+  /* セレクトボックスにカーソルが乗ったときのスタイル */
+}
+
+.hd_select_list {
+  border: 0;
+}
+
+.hd_menu {
+  width: 60px;
+  height: 100%;
+  text-align: center;
+  padding-right: 2px;
+}
+
+.hd_menu i {
+  position: relative;
+  top: 25%;
+}
+
+.hd_menu.active {
+  background-color: #000;
+  /* 背景色 */
+}
+
+.hd_menu.active i {
+  color: #fff;
+  /* 'i'要素の色 */
+}
+
+.header .hd_menu a {
+  text-decoration: none;
+  color: #555;
+  font-size: 14px;
+  margin-left: 5px;
+}
+
+.header .hd_menu a:hover {
+  cursor: pointer;
+}
+
+.mypage {
+  margin-top: 2px;
+  font-size: 30px;
+}
+
+.mypage_login {
+  margin-top: 4px;
+  font-size: 22px;
+}
+
+.mypage_menu {
+  position: absolute;
+  background-color: #000;
+  top: 60px;
+  right: 0px;
+
+  width: 160px;
+
+  text-align: left;
+  font-size: 14px;
+}
+
+.mypage_container {
+  padding: 0;
+}
+
+.mypage_container div {
+  padding: 10px;
+  border-top: solid 1px #fff;
+}
+
+.mypage_container a {
+  color: #fff !important;
+}
+
+.mypage_container a:hover {
+  color: #e5508b !important;
+}
+
+/* ---------------------------- sidebar ---------------------------- */
+
+.aside {
+  width: 40px;
+  height: 100%;
+
+  background-color: #555353;
+
+  padding-top: 90px;
+  position: fixed;
+  z-index: 90;
+  top: 0;
+  left: 0;
+
+  display: flex;
+  justify-content: center;
+}
+
+#toggleSidebar {
+  width: 24px;
+  height: 24px;
+  margin-top: 10px;
+  background-size: cover;
+  /* 画像がボタンのサイズに合わせて覆うように設定 */
+  background-position: center;
+  /* 画像を中央に配置 */
+  overflow: hidden;
+  /* はみ出た内容を非表示に */
+  cursor: pointer;
+  /* カーソルをポインターに設定 */
+
+  transition: transform 0.5s ease;
+}
+
+.rotated {
+  transform: rotate(-180deg);
+}
+
+.sidebar {
+  width: 300px;
+  height: calc(100% - 60px);
+  background-color: #fbfbfb;
+
+  display: inline-block;
+  position: fixed;
+  top: 90px;
+  /* ヘッダーの高さに合わせてtopを設定 */
+  left: 40px;
+
+  padding-top: 30px;
+  padding-bottom: 30px;
+
+  overflow-y: scroll;
+
+  transition: transform 0.4s ease-in-out;
+  transform: translateX(0);
+}
+
+.sidebar.hide {
+  transform: translateX(-100%);
+}
+
+/* Webkitブラウザ用のスクロールバーのスタイリング */
+.sidebar::-webkit-scrollbar {
+  width: 12px;
+  /* スクロールバーの幅 */
+}
+
+.sidebar::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  /* トラック（スクロールバーの背景）の色 */
+}
+
+.sidebar::-webkit-scrollbar-thumb {
+  background: #888;
+  /* スクロールバー本体の色 */
+  border-radius: 0;
+  /* 角の丸みをなくします */
+}
+
+.sidebar::-webkit-scrollbar-thumb:hover {
+  background: #555;
+  /* ホバー時のスクロールバー本体の色 */
+}
+
+
+.side_device_type {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  padding: 20px 0;
+}
+
+
+.toggle-switch {
+  position: relative;
+  width: 260px;
+  /* スイッチの幅 */
+  height: 30px;
+  /* スイッチの高さ */
+  background-color: #f1f1f1;
+  border-radius: 25px;
+  /* ボタンの形状を丸く */
+
+  margin: 0 auto;
+}
+
+.toggle-labels {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 100%;
+}
+
+.toggle-button {
+  background-color: transparent;
+  border-radius: 25px;
+  width: 50%;
+
+  transition: background-color 0.2s ease;
+}
+
+.toggle-button.active {
+  background-image: linear-gradient(75deg, rgb(252, 182, 106) 0%, rgb(251, 181, 176) 10%, rgb(222, 149, 180) 50%, rgb(147, 197, 215) 90%, rgb(144, 218, 170) 100%);
+  color: #ffffff;
+  border-radius: 25px;
+  width: 50%;
+}
+
+.label-left,
+.label-right {
+  cursor: pointer;
+}
+
+.side_icon {
+  width: 20px;
+  height: 100%;
+  margin: 2.5px 6px 0 0;
+}
+
+.side_lp_count {
+  padding: 20px;
+}
+
+.count_pages {
+  font-family: "Roboto", sans-serif;
+  font-size: 64px;
+  font-weight: bold;
+}
+
+.parent_list {
+  border-bottom: dotted;
+}
+
+.side_lp_count_value {
+  text-align: center;
+}
+
+.category_title,
+.side_color_title,
+.other_category_title {
+  display: flex;
+  padding: 15px;
+}
+
+.sidebar .side_category ul {
+  list-style-type: none;
+  font-size: 14px;
+}
+
+.sidebar .side_category .major_ul {
+  padding: 15px;
+}
+
+.lp_count_title {
+  letter-spacing: 0.08em;
+  margin: 0;
+}
+
+.category_title p,
+.other_category_title p {
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.parent-checkbox,
+.child-checkbox,
+.other-parent-checkbox,
+.other-child-checkbox {
+  margin: 0 5px 1px 0;
+}
+
+.accordion-title:hover,
+.other-accordion-title:hover {
+  color: #e5508b;
+  cursor: pointer;
+}
+
+.accordion-title,
+.other-accordion-title {
+  font-size: 12px;
+  display: flex;
+  position: relative;
+  border-top: dashed 1px #000;
+  padding: 10px 15px;
+}
+
+.accordion-title::before,
+.accordion-title::after {
+  background: #555353;
+  content: "";
+  height: 2px;
+  position: absolute;
+  right: 25px;
+  top: 50%;
+  transition: opacity .3s ease-in-out;
+  width: 10px;
+}
+
+.accordion-title::after {
+  transform: rotate(90deg);
+}
+
+.accordion-title.open::after {
+  opacity: 0;
+}
+
+.accordion-content {
+  font-size: 12px;
+  padding: 10px 15px;
+  display: none;
+}
+
+.accordion-list {
+  display: flex;
+  margin-bottom: 10px;
+}
+
+.accordion-list:hover {
+  color: #e5508b;
+  cursor: pointer;
+}
+
+.w-80 {
+  margin: 0 15px;
+  height: 5px;
+  background-color: #555;
+  border: none;
+}
+
+.side_color {
+  padding: 15px 0 15px 0;
+}
+
+.color_title {
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.side_color_container {
+  display: flex;
+  flex-wrap: wrap;
+
+  border-top: dashed 1px;
+  padding-top: 10px;
+}
+
+.side_color_box {
+  padding: 0 0 10px 10px;
+}
+
+.color_sheet {
+  width: 24px;
+  height: 24px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.side_color_item {
+  width: 28px;
+  height: 28px;
+  border: 1px solid;
+}
+
+.side_sns_container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 15px;
+}
+
+.circle_link {
+  display: inline-block;
+}
+
+.circle_image {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-size: cover;
+  background-position: center;
+  border: 2px solid #ffffff;
+  margin: 0 5px;
+}
+
+.accordion,
+.accordion-item,
+.accordion-header,
+.accordion-button {
+  style: none;
+}
+
+
+/* ---------------------------- lp_section ---------------------------- */
+
+.lp_section {
+  position: relative;
+  height: 100%;
+
+  margin: 0 0 0 340px;
+  padding: 150px 0px 150px 0;
+
+  transition: transform 0.4s ease-in-out;
+}
+
+.lp_section.slide-left {
+  transform: translateX(-300px);
+}
+
+.filter-count {
+  padding: 0 0 16px 40px;
+}
+
+.filter-summary {
+  display: flex;
+  flex-wrap: wrap;
+
+  padding: 0 0 16px 40px;
+
+}
+
+.filter-item {
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+
+  font-size: 14px;
+  color: #fff;
+  background-color: #505046;
+  border-radius: 4px;
+
+  padding: 0 30px 0 8px;
+  margin: 0 10px 5px 0;
+}
+
+.filter_delete_button {
+  position: absolute;
+  right: 5px;
+  margin-left: 10px;
+  text-decoration: none;
+  color: #ffffff;
+}
+
+.sort_container {
+  display: flex;
+  padding: 0 0 15px 40px;
+
+}
+
+.sort_select,
+.folder_select {
+  width: 150px;
+  height: 30px;
+  font-size: 12px;
+
+  border: solid 1px #ccc;
+}
+
+.grid_icon {
+  width: 27px;
+  height: 27px;
+  ;
+  margin-bottom: 4px;
+}
+
+.list_view_button {
+  color: #555;
+  font-size: 24px;
+  margin: 0 10px;
+  position: relative;
+  top: -4px;
+}
+
+.favorites_filter {
+  color: #555;
+  font-size: 24px;
+  margin-right: 10px;
+  position: relative;
+  top: -4px;
+}
+
+.modal-body {
+  display: flex;
+}
+
+.modal-lp-img {
+  width: 200px;
+  height: 400px;
+  background-position: top;
+  background-size: cover;
+  overflow: hidden;
+}
+
+.lp_container {
+  display: flex;
+  flex-wrap: wrap;
+
+  padding: 0 0 0 40px;
+}
+
+.lp_card {
+  background-color: #fff;
+  position: relative;
+  width: 200px;
+  margin: 0 20px 20px 0;
+  box-shadow: 0 0 2px #c8c8c8;
+}
+
+.updated_at {
+  position: absolute;
+  top: 2px;
+  left: 4px;
+  z-index: 100;
+
+  color: #fff;
+}
+
+.lp_card_img_container {
+  overflow: hidden;
+}
+
+.lp_card_img {
+  width: 200px;
+  height: 400px;
+  background-position: top;
+  background-size: cover;
+  background-position: top;
+  /* 背景画像を中央に配置 */
+  background-repeat: no-repeat;
+  overflow: hidden;
+  transition: transform 0.5s ease;
+}
+
+.lp_card_img:hover {
+  transform: scale(1.1);
+  /* 画像をズームアップ */
+  transition: transform 0.5s ease, filter 0.5s ease;
+  /* トランジションを追加 */
+  filter: brightness(50%);
+}
+
+.other_img {
+  background-size: contain;
+  /* 背景画像がコンテナを覆うように調整 */
+}
+
+.lp_card_data {
+  height: 30px;
+  margin: 0;
+  padding: 6px 10px 0 10px;
+
+  font-size: 13px;
+
+  display: flex;
+  justify-content: space-between;
+
+  background-color: #ffffff;
+  border-top: solid 1px #c8c8c8
+}
+
+.lp_card_label {
+  margin: 0;
+  white-space: nowrap;
+  /* テキストを折り返さない */
+  overflow: hidden;
+  /* 隠れたテキストを非表示 */
+  text-overflow: ellipsis;
+  /* 隠れたテキストを「…」で表示 */
+}
+
+.favorite_button,
+.favorite_button_guest {
+  color: #555;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.favorite-active {
+  color: #e5508b;
+}
+
+.favorites_count {
+  color: #000;
+}
+
+.folder_box {
+  background-color: #888;
+  color: #fff;
+  padding: 5px 10px;
+  margin: 0 0 5px 5px;
+}
+
+.folder_management_button, .other_folder_management_button {
+  height: 30px;
+  font-size: 12px;
+  color: #fff;
+  background-color: #e5508b;
+  padding: 0 20px;
+  margin-left: 10px;
+}
+
+.color_pallet {
+  width: 24px;
+  height: 24px;
+  border: solid 1px;
+}
+
+.breadcrumb {
+  position: absolute;
+  top: 90px;
+  background-color: #e7e7e7;
+  width: 100%;
+  padding: 4px 0 4px 8px;
+
+  font-size: 14px;
+}
+
+.lp_show_container {
+  padding: 0 40px 0 40px;
+}
+
+.lp_show_sp_card {
+  max-width: 400px;
+}
+
+.lp_show_img {
+  width: 100%;
+  height: auto;
+}
+
+.accordion-item {
+  margin-bottom: 10px;
+}
+
+.show_toggle_container {
+  display: flex;
+  align-items: end;
+}
+
+.show_toggle_button {
+  background-color: #e5508b;
+  color: #fff;
+
+  border-radius: 25px;
+  padding: 0 20px 2px 20px;
+
+  font-size: 18px;
+
+  text-decoration: none;
+}
+
+.lp_show_head {
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+
+  height: 76px;
+}
+
+.lp_title {
+  position: absolute;
+
+}
+
+.lp_url {
+  position: absolute;
+  bottom: 0px;
+  color: #000;
+  font-size: 18px;
+  text-decoration: none;
+}
+
+.show_back_button {
+  display: flex;
+  justify-content: right;
+  padding: 40px 0 6px 0;
+}
+
+#back_button {
+  cursor: pointer;
+}
+
+.show_back_label {
+  display: flex;
+  justify-content: right;
+  padding: 0 6px;
+}
+
+/*==================================================
+　5-2-1 3本線が×に
+===================================*/
+/*ボタン外側※レイアウトによってpositionや形状は適宜変更してください*/
+.openbtn{
+	/*ボタン内側の基点となるためrelativeを指定。
+追従するナビゲーションの場合はfixed＋top、rightといった位置をセットで指定*/
+	position: relative;
+	background:#57a2c7;
+	cursor: pointer;
+    width: 50px;
+    height:50px;
+	border-radius: 5px;
+}
+
+/*ボタン内側*/
+.openbtn span{
+    display: inline-block;
+    transition: all .4s;/*アニメーションの設定*/
+    position: absolute;
+    left: 14px;
+    height: 3px;
+    border-radius: 2px;
+	background: #fff;
+  	width: 45%;
+  }
+
+.openbtn span:nth-of-type(1) {
+	top:15px;	
+}
+
+.openbtn span:nth-of-type(2) {
+	top:23px;
+}
+
+.openbtn span:nth-of-type(3) {
+	top:31px;
+}
+
+/*activeクラスが付与されると線が回転して×に*/
+
+.openbtn.active span:nth-of-type(1) {
+    top: 18px;
+    left: 18px;
+    transform: translateY(6px) rotate(-45deg);
+    width: 30%;
+}
+
+.openbtn.active span:nth-of-type(2) {
+	opacity: 0;/*真ん中の線は透過*/
+}
+
+.openbtn.active span:nth-of-type(3){
+    top: 30px;
+    left: 18px;
+    transform: translateY(-6px) rotate(45deg);
+    width: 30%;
+}
+
+.hd_bars {
+  display: none;
+}
+
+
+/* スマートフォン版 */
+
+@media screen and (max-width: 768px) {
+
+.header {
+  padding: 0;
+}
+
+.hd_bars {
+  display: block;
+  padding-left: 15px;
+}
+
+.side_close {
+  display: block;
+}
+
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: -300px; /* サイドバーの幅に応じて調整 */
+  width: 300px;
+  height: 100%;
+  background-color: #fbfbfb;
+  transition: transform 0.3s ease-out;
+  z-index: 1000;
+}
+
+.show-sidebar {
+  transform: translateX(300px); /* サイドバーの幅に応じて調整 */
+}
+
+.filter-count {
+  padding: 0 0 16px 18px;
+}
+
+.sort_container {
+  padding:0 0 15px 18px;
+}
+
+.folder_management_button, .other_folder_management_button {
+  width: 150px;
+  margin: 10px 0 0 0;
+}
+
+  .aside {
+    display: none;
+  }
+
+  .lp_section {
+    margin-left: 0;
+  }
+
+  .lp_container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    /* カード間及びコンテナの両端に均等な余白を設定 */
+    margin-left: -5px;
+    /* コンテナの左側の余白を打ち消す */
+    margin-right: -5px;
+    /* コンテナの右側の余白を打ち消す */
+    padding: 0 10px;
+  }
+
+  .lp_card {
+    flex: 0 0 calc(45% - 5px);
+    /* スマホサイズでカードが2カラム表示されるように調整 */
+    margin: 5px;
+    /* カードの余白を設定 */
+  }
+
+  .lp_card_img {
+    width: 100%;
+  }
+
+  .lp_section_show {
+    padding-top: 200px;
+  }
+
+  .lp_show_head {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .show_toggle_container {
+
+  }
+
+  .lp_url {
+    display: none;
+    /* URLが長い場合に折り返し */
+  }
+}
